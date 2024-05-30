@@ -1,0 +1,21 @@
+version: "3.1"
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_crawl_website
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-admin}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-admin@1234}
+      - POSTGRES_DB=${POSTGRES_DB:-crawl-website-backend-database}
+    volumes:
+      - postgres_data:/var/lib/postgresql/crawl-website-data
+    ports:
+      - "5432:5432"
+    restart: always
+volumes:
+  postgres_data:
+
+networks:
+  strapi:
+    name: Strapi
+    driver: bridge
