@@ -4,10 +4,11 @@
   "info": {
     "singularName": "website",
     "pluralName": "websites",
-    "displayName": "website"
+    "displayName": "website",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

@@ -794,9 +794,10 @@ export interface ApiWebsiteWebsite extends Schema.CollectionType {
     singularName: 'website';
     pluralName: 'websites';
     displayName: 'website';
+    description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     target_url: Attribute.String;
@@ -807,7 +808,6 @@ export interface ApiWebsiteWebsite extends Schema.CollectionType {
     title: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::website.website',
       'oneToOne',
